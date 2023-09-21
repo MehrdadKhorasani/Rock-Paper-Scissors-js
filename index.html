@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock Paper Scissors</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body>
+	<section class="intro">
+		<h1>Rock Paper and Scissors</h1>
+		<button>Let's Play</button>
+	</section>
+
+	<section class="game fadeOut">
+
+		<div class="scoreBoard">
+			<div class="badge" id="userName">USER</div>
+			<div class="badge" id="cpuName">CPU</div>
+			<span id="userScore">0</span>-<span id="cpuScore">0</span>
+		</div>
+
+		<div class="hands">
+
+			<img  id="userHand" src="img/hrock.png">
+			<img  id="cpuHand" src="img/hrock.png">
+		</div>
+
+		<div class="result">
+			<p>User Wins</p>
+		</div>
+
+		<div class="options">
+			<div class="option" data-option-name = "rock">
+				<img src="img/rock.png"> 
+				<p>Rock</p>
+			</div>
+			<div class="option" data-option-name = "paper">
+				<img src="img/paper.png"> 
+				<p>Paper</p>				
+			</div>
+			<div class="option" data-option-name = "scissors">
+				<img src="img/scissors.png"> 
+				<p>Scissors</p>
+			</div>
+		</div>
+
+	</section>
+
+</body>
+</html>

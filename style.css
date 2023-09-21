@@ -1,0 +1,191 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f2f2f2;
+}
+
+.intro{
+	color: black;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	transition: opacity 0.5s ease;
+}
+.intro h1 {
+	font-size: 50px;
+}
+
+.intro button {
+	width: 150px;
+	height: 50px;
+	background: none;
+	border: none;
+	color: black;
+	font-size: 20px;
+	background-color: #dddbdb;	
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.fadeOut{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.fadeIn{
+	opacity: 1;
+	pointer-events: all;
+}
+
+.game{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.5s ease 0.5s;
+	padding: 2rem 7rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scoreBoard{
+	border: 3px solid black;
+	border-radius: 4px;
+	background-color: #dddbdb;
+	text-align: center;
+	padding: 15px 20px;
+	position: relative;
+	margin-bottom: 70px;
+}
+
+.badge{
+	background-color: #dddbdb;
+	margin: 1px;
+	padding: 4px;
+	color: black;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+#userName{
+	border-top: 3px solid black;
+	border-left: 3px solid black;
+	border-bottom: 3px solid black;
+	position: absolute;
+	top: 13.5px;
+	left: -67px;
+	padding: 10px;
+}
+
+#cpuName{
+	border-top: 3px solid black;
+	border-right: 3px solid black;
+	border-bottom: 3px solid black;
+	position: absolute;
+	top: 13.5px;
+	right: -67px;
+	padding: 10px 15px;
+}
+
+.scoreBoard span{
+	font-size: 32px;
+	padding: 5px;
+	color: black;
+}
+
+.hands{
+	display: flex;
+	column-gap: 7rem;
+	margin-bottom: 50px;
+}
+
+.hands img{
+	width: 100px;
+}
+
+#userHand{
+	transform: rotate(90deg);	
+}
+
+.userHandShake{
+	animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake{
+  50%{
+    transform: rotate(80deg);
+	}
+}
+
+#cpuHand{
+	transform: rotate(-90deg) rotateY(180deg);	
+}
+
+.cpuHandShake{
+	animation: cpuShake 0.7s ease infinite;
+}
+
+@keyframes cpuShake{
+  50%{
+    transform: rotate(-80deg) rotateY(180deg);
+	}
+}
+
+.result{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.result p{
+	font-size: 32px;
+	color: black;
+}
+
+.options{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.option{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+
+}
+
+.options p{
+	color: black;
+	font-size: 12px;
+	margin-top: 1rem;
+}
+
+.options img{
+	width: 70px;
+	border-radius: 35px;
+}
+
+.option img:hover {
+	background-color: #dddbdb;
+}
+
+.option img:active {
+	background-color: #b3b1b1;
+}
+
+.disableBtns {
+	pointer-events: none;
+}
